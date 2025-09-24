@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shenandoah Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- GPX Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Shenandoah Trail Explorer</h1>
+
+    <!-- Trail Selector -->
+    <div style="margin-bottom: 15px;">
+      <label for="trailSelect"><strong>Select a trail:</strong></label>
+      <select id="trailSelect"></select>
+    </div>
+
+    <div class="map-card-wrapper">
+  <div id="map"></div>
+  <div id="trail-card"></div>
+</div>
+
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- GPX Plugin (must come after Leaflet, before your script) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+  <!-- Our script -->
+  <script src="script.js"></script>
+</body>
+</html>
+
