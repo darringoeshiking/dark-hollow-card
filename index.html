@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shenandoah Prototype</title>
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <!-- GPX Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 </head>
 <body>
   <div id="app">
@@ -20,11 +21,12 @@
       <select id="trailSelect"></select>
     </div>
 
+    <!-- Map + Trail Card wrapper -->
     <div class="map-card-wrapper">
-  <div id="map"></div>
-  <div id="trail-card"></div>
-</div>
-
+      <div id="map"></div>
+      <div id="trail-card"></div>
+    </div>
+  </div>
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -34,4 +36,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
