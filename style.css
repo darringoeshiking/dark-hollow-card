@@ -1,90 +1,99 @@
+/* Reset & Base Styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f3ef; /* warm off-white */
+  color: #2c2c2c;
+  line-height: 1.6;
 }
 
+/* App Wrapper */
 #app {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
-  max-width: 1200px;
-  margin: auto;
 }
 
+/* Title */
 h1 {
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
-  font-size: 2rem;
-  color: #2c3e50;
+  color: #2e3b2e; /* dark earthy green */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #8c6a43; /* leather brown underline */
+  padding-bottom: 8px;
 }
 
+/* Trail Selector */
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  padding: 8px 12px;
+  border: 2px solid #8c6a43;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e3b2e;
+  cursor: pointer;
+}
+
+/* Map + Card Layout (stacked) */
+.map-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Map */
 #map {
-  height: 500px;
-  flex: 2;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 400px;
+  border: 3px solid #2e3b2e;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Trail Card */
 #trail-card {
-  flex: 1;
-  background: #fff;
-  border-radius: 8px;
-  padding: 16px;
-  margin-left: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border-left: 6px solid #8c6a43;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.meta {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 10px;
+/* Trail Card Headings */
+#trail-card h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #2e3b2e;
+  text-transform: uppercase;
+  border-bottom: 2px solid #d4c2a8;
+  padding-bottom: 6px;
 }
 
-.stats {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 12px 0;
+/* Trail Card Content */
+#trail-card p {
+  margin: 6px 0;
+  font-size: 1rem;
 }
 
-.stats li {
-  margin: 4px 0;
-  font-size: 0.95rem;
+#trail-card strong {
+  color: #8c6a43;
 }
 
-.features {
-  margin-top: 10px;
-}
-
-.feature-pill {
-  display: inline-block;
-  background: #eaf4ff;
-  border: 1px solid #bcdfff;
-  border-radius: 16px;
-  padding: 4px 10px;
-  margin: 3px;
-  font-size: 0.85rem;
-  color: #0366d6;
-}
-
-/* Flex layout for map + card */
-#map, #trail-card {
-  margin-top: 10px;
-}
-
-@media (min-width: 768px) {
-  #app {
-    display: flex;
-    flex-direction: column;
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
   }
-
-  #map, #trail-card {
-    margin-top: 0;
-  }
-
-  .map-card-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin-top: 15px;
+  #map {
+    height: 300px;
   }
 }
